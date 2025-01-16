@@ -1,126 +1,159 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <style>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">/* Base styles that work across email clients */
         body {
-            font-family: Arial, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: #333333;
             max-width: 600px;
             margin: 0 auto;
+            padding: 20px;
         }
         .header {
-            color: #1a478f;
-            margin-bottom: 20px;
+            border-bottom: 1px solid #E0E0E0;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
         }
         .section {
-            margin: 20px 0;
+            margin: 25px 0;
         }
         .section-title {
-            color: #1a478f;
+            color: #041E42;
+            font-size: 18px;
             font-weight: bold;
-            margin: 15px 0 10px 0;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #E0E0E0;
+        }
+        .deadline-alert {
+            background-color: #FFF3E0;
+            border-left: 4px solid #FF9800;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .deadline-date {
+            color: #D32F2F;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .login-box {
+            background-color: #F5F5F5;
+            border: 1px solid #E0E0E0;
+            border-radius: 4px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .login-detail {
+            margin: 10px 0;
+        }
+        .events-section {
+            background-color: #FAFAFA;
+            padding: 20px;
+            border-radius: 4px;
         }
         .event {
             margin: 15px 0;
         }
         .event-date {
             font-weight: bold;
-        }
-        .login-details {
-            background-color: #f5f5f5;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 15px 0;
-        }
-        .popup-list {
-            margin-left: 20px;
+            color: #041E42;
         }
         .footer {
-            margin-top: 30px;
-            border-top: 1px solid #ddd;
-            padding-top: 15px;
-            font-style: italic;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #E0E0E0;
+            font-size: 14px;
+            color: #666666;
         }
-    </style>
-</head>
-<body>
-    <div class="header">
-        <h2>Dear Participant,</h2>
-        <p>Welcome to the AI Art Competition! Thank you for signing up.</p>
-    </div>
+        .invite-friends {
+            background-color: #E8F5E9;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        a {
+            color: #0D47A1;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+</style>
+<div class="header">
+<h2 style="color: #041E42; margin: 0;">Dear Participant,</h2>
 
-    <div class="section">
-        <div class="section-title">Important Deadlines</div>
-        <p>Your artwork must be submitted by midnight February 25.</p>
-    </div>
+<p>Welcome to the AI Art Competition! Thank you for signing up.</p>
+</div>
 
-    <div class="section">
-        <div class="section-title">AI Tool</div>
-        <p>Remember that you must only use our official experiment platform for the AI portion of your artwork.</p>
-    </div>
+<div class="deadline-alert">
+<p><span style="font-weight: bold;">IMPORTANT:</span> All artwork must be submitted by <span class="deadline-date">midnight February 25</span></p>
 
-    <div class="section">
-        <div class="section-title">Login Details For The Art Platform</div>
-        <div class="login-details">
-            <p>Visit <a href="artstudio">artstudio</a></p>
-            <p>Enter your Login ID: ${e://Field/ExternalDataReference} OR ${m://ExternalDataReference}</p>
-            <p>You can start generating AI art immediately</p>
-        </div>
-    </div>
+<p>Remember that you must only use our official experiment platform for the AI portion of your artwork.</p>
+</div>
 
-    <div class="section">
-        <div class="section-title">AI Art PopUps - Free Snacks & Materials!</div>
-        <p>You have signed up for the AI Involved art category. You are welcome to work with whatever non-AI media, techniques and tools of your choice. Your piece can be no larger than 36" on either side.</p>
-        <p>You can also attend our AI Art PopUps series – which offers free art materials, space to work, space to store your works, and snacks. During these interactive sessions you can create art using both traditional materials and our AI platform.</p>
-    </div>
+<div class="section">
+<div class="section-title">Login Details For The Art Platform</div>
 
-    <div class="section">
-        <div class="section-title">Walsh AI Art PopUps: RSVP for priority or drop-in (first come, first serve)</div>
-        
-        <div class="event">
-            <div class="event-date">Saturday, January 18, 2025 | 1:00-3:00 PM</div>
-            <p>AI Art PopUp</p>
-        </div>
+<div class="login-box">
+<p class="login-detail">Visit <a href="ai-art-auth.web.app">ai-art-auth.web.app</a></p>
 
-        <div class="event">
-            <div class="event-date">Friday, January 24, 2025 | Double Header</div>
-            <p>3:00-4:00 PM: GU Library Digital Scholarship Workshop<br>
-            Learn techniques for using AI to create and edit images</p>
-            <p>4:00-6:00 PM: AI Art PopUp<br>
-            Hands-on creation session</p>
-        </div>
-    </div>
+<p class="login-detail">Enter your Login ID: <strong>${m://ExternalDataReference}</strong></p>
 
-    <div class="section">
-        <div class="section-title">Maker Hub AI Art PopUps: RSVP for priority or drop-in (first come, first serve)</div>
-        
-        <div class="event">
-            <div class="event-date">Friday, February 7, 2025 | 4:00-6:00 PM</div>
-            <p>AI Art PopUp</p>
-        </div>
+<p class="login-detail">You can start generating AI art immediately!</p>
+</div>
+</div>
 
-        <div class="event">
-            <div class="event-date">Saturday, February 15, 2025 | 1:00-3:00 PM</div>
-            <p>AI Art PopUp</p>
-        </div>
-    </div>
+<div class="section">
+<div class="section-title">AI Art PopUps - Free Snacks &amp; Materials!</div>
 
-    <div class="section">
-        <div class="section-title">What To Expect At Art POPUPS</div>
-        <ul class="popup-list">
-            <li>Access to traditional art materials and supplies</li>
-            <li>Computer stations with our AI art platform</li>
-            <li>Technical assistance and creative guidance</li>
-            <li>Collaborative workspace</li>
-            <li>Refreshments provided</li>
-        </ul>
-    </div>
+<p>You have signed up for the AI Involved art category. You are welcome to work with whatever non-AI media, techniques and tools of your choice. Your piece can be no larger than 36&quot; on either side.</p>
 
-    <div class="footer">
-        <p>Best wishes,<br>
-        Georgetown University AI Art Show Team</p>
-        <p>Need Help? or General Inquiries: <a href="mailto:aiartshow@georgetown.edu">aiartshow@georgetown.edu</a></p>
-    </div>
-</body>
-</html>
+<p>You can also attend our AI Art PopUps series &ndash; which offers free art materials, space to work, space to store your works, and snacks. During these interactive sessions you can create art using both traditional materials and our AI platform.</p>
+
+<div class="events-section">
+<h3 style="color: #041E42; margin-top: 0;">Walsh AI Art PopUps: RSVP for priority or drop-in (first come, first serve)</h3>
+
+<div class="event">
+<div class="event-date">Saturday, January 18, 2025 | 1:00-3:00 PM</div>
+
+<p>AI Art PopUp</p>
+</div>
+
+<div class="event">
+<div class="event-date">Friday, January 24, 2025 | Double Header</div>
+
+<p>3:00-4:00 PM: GU Library Digital Scholarship Workshop<br />
+Learn techniques for using AI to create and edit images</p>
+
+<p>4:00-6:00 PM: AI Art PopUp<br />
+Hands-on creation session</p>
+</div>
+
+<h3 style="color: #041E42;">Maker Hub AI Art PopUps: RSVP for priority or drop-in (first come, first serve)</h3>
+
+<div class="event">
+<div class="event-date">Friday, February 7, 2025 | 4:00-6:00 PM</div>
+
+<p>AI Art PopUp</p>
+</div>
+
+<div class="event">
+<div class="event-date">Saturday, February 15, 2025 | 1:00-3:00 PM</div>
+
+<p>AI Art PopUp</p>
+</div>
+</div>
+</div>
+
+<div class="invite-friends">
+<p style="margin: 0;"><strong>Know someone who&#39;d love to join the AI Art Competition?</strong><br />
+Share the <a href="${l://SurveyURL}">sign-up</a> form</p>
+</div>
+
+<div class="footer">
+<p>Best wishes,<br />
+<strong>Georgetown University AI Art Show Team</strong></p>
+
+<p>Need Help? or General Inquiries: <a href="mailto:aiartshow@georgetown.edu">aiartshow@georgetown.edu</a></p>
+
+<p style="font-size: 12px; color: #888888;">To unsubscribe from future emails: ${l://OptOutLink?d=Click here to unsubscribe}</p>
+</div>
